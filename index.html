@@ -1,0 +1,227 @@
+﻿<!DOCTYPE HTML> 
+<html lang="ru"> 
+<head> 
+    <meta charset="utf-8"/>
+    <title> Домашняя работа </title>
+    <link rel="icon" href="Img/book.ico" type="image/x-icon">
+    <style>
+        body {
+            box-sizing: border-box;
+            background-color: #EAE6E5;
+            margin: 0;
+            --otstup: 150px;
+            --heightFooter: 50px;
+            --size: calc(var(--heightFooter) - 10px);
+        }
+
+        .wrapmenu {
+            position: fixed;
+            padding: 15px;
+            background: white;
+            top: var(--heightFooter);
+            right: var(--otstup);
+            width: 180px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,.1);
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            transform: scaleY(0);
+            transform-origin: 0 0;
+            transition-property: transform;
+            transition-duration: 500ms;
+            z-index: 2;
+        }
+
+        .boxJScontent {
+            font-size: 18px;
+            transition-property: transform;
+            transition-duration: 1s;
+            transform: rotate3d(-1, 0, -1, 180deg);
+        }
+
+        .boxAcontent {
+            background-color: #b7faf3;
+            transition-property: transform, opacity;
+            transition-duration: 1s;
+            transform: rotateY(-180deg);
+            opacity: 0;
+        }
+
+        .boxQAcontent {
+            background-color: #b7faf3;
+            transform: rotateY(-180deg);
+            transition-property: transform, opacity;
+            transition-duration: 1s;
+            opacity: 0;
+        }
+
+        .info_info {
+            position: absolute;
+            padding: 5px;
+            right: var(--otstup);
+            top: var(--heightFooter);
+            width: 180px;
+            background: #b6b8bd;
+            border-radius: 12px;
+            font-size: 18px;
+            transition: opacity 500ms;
+            opacity: 0;
+            z-index: 3;
+        }
+
+    </style>
+    <link href="styles/menuStyle.css" rel="stylesheet" type="text/css">
+    <link href="styles/contentStyles.css" rel="stylesheet" type="text/css">
+    <link href="styles/headerStyles.css" rel="stylesheet" type="text/css">
+    <link href="styles/alertPanelStyles.css" rel="stylesheet" type="text/css">
+    <link href="styles/buttonStyles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="Img/binary.jpg" alt="Binary Studio">
+        <div class="menublock">
+            <span class="info_span"> &#128276 </span>
+            <div class="simb-logo">G</div>
+            <div class="info_info">
+                <span class="info-text">Н</span>овых уведомлений пока нет ...
+            </div>
+        </div>
+    </header>
+
+    <input class="menucheck" type="checkbox" />
+    <div class="wrapmenu">
+        <img class="logos" src="Img/Aгthor.ico" alt="Garry Levin">
+        <h3>Garry Levin</h3>
+        <ul>
+            <li><a>&#128203 Profile</a></li>
+            <li><a>&#128273 Log Off</a></li>
+            <li><a>&#128083 Find item</a></li>
+        </ul>
+    </div>
+
+    <section class="alertpanel">
+        <div class="error-alert">
+            <img class="alertimg" src="Img/Alert.ico" alt="alert">
+            Error !
+            <br />
+            Something went wrong. Please, try again later.
+        </div>
+        <div class="info-alert">
+            <img class="alertimg" src="Img/Ok.ico" alt="info">
+            Success !
+            <br />
+            Profile was updated.
+        </div>
+        <div class="joke-alert">
+            <img class="alertimg" src="Img/info.ico" alt="Ok">
+            Don't joke !
+            <br />
+            This is not a real menu !
+        </div>
+    </section>
+
+    <section class="context">
+        <div class="item-A">
+            <div class="boxA boxCap">
+                <img src="Img/BSA.png" alt="BSA">
+            </div>
+            <div class="boxAcontent boxContent">
+                <span style="margin-left: 15px">Попробуйте нажать кнопку с помощью мышки :</span>
+                <img class="smile" src="https://cdn.iconscout.com/icon/free/png-512/bright-cool-eye-eyewear-face-glasses-smile-sun-sunglasses-emoji-37654.png" alt="smile">
+                <div class="trapA"></div>
+                <div class="trapB"></div>
+                <div class="trapC"></div>
+                <div class="trapD"></div>
+                <button class="button">Click me</button>
+            </div>
+        </div>
+        <div class="item-JS">
+            <div class="boxJS boxCap">
+                JS&nbsp
+            </div>
+            <div class="boxJScontent boxContent">
+                <img class="context-img" src="https://lakefullofpictures.com/wp-content/uploads/2016/03/js-logo.png" alt="JS">
+                <span class="cap-letter">M</span>ulti-paradigm programming language. Supports object-oriented, imperative and functional styles. It is an implementation of the ECMAScript standard.
+                <br />
+                <span class="cap-letter">J</span>avaScript was influenced by many languages, the goal was to make the language look like Java. JavaScript is not spoken by any company or organization, which distinguishes it from a number of programming languages used in web development.
+            </div>
+        </div>
+        <div class="item-PHP">
+            <div class="boxPHP boxCap">
+                php
+            </div>
+            <div class="boxContent">
+                <img class="context-img" src="https://pngimg.com/uploads/php/php_PNG24.png" alt="php">
+                <span class="cap-letter">P</span>HP: Hypertext Preprocessor. General-purpose scripting language, intensively used for developing web applications. It is currently supported by the vast majority of hosting providers and is one of the leaders among the languages used to create dynamic websites.
+                <br />
+                <span class="cap-letter">T</span>he language and its interpreter (Zend Engine) are developed by a group of enthusiasts as part of an open source project. The project is distributed under its own license, incompatible with the GNU GPL.
+            </div>
+        </div>
+        <div class="item-QA">
+            <div class="boxQA boxCap">
+                QA
+            </div>
+            <div class="boxQAcontent boxContent">
+                <img class="context-img" src="https://static7.depositphotos.com/1003962/779/i/450/depositphotos_7796990-stock-photo-questions-and-answers.jpg" alt="QA">
+                <span class="cap-letter">QA</span> - (Question-answering system) is an information system capable of receiving questions and answering them in a natural language.
+            </div>
+        </div>
+        <div class="item-JAVA">
+            <div class="boxJAVA boxCap">
+                Java
+            </div>
+            <div class="boxJAVAcontent boxContent">
+                <img class="context-img" src="https://upload.wikimedia.org/wikipedia/ru/thumb/3/39/Java_logo.svg/1200px-Java_logo.svg.png" alt="Java">
+                <span class="cap-letter">J</span>ava is a strongly typed object-oriented programming language developed by Sun Microsystems.
+                <br />
+                <span class="cap-letter">J</span>Java applications are usually translated into special bytecode, so they can run on any computer architecture.
+            </div>
+        </div>
+        <div class="item-NET">
+            <div class="boxNET boxCap">
+                .NET
+            </div>
+            <div class="boxNETcontent boxContent">
+                <img class="context-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/DotNet.svg/270px-DotNet.svg.png" alt="php">
+                <span class="cap-letter">M</span>icrosoft .NET is a software technology offered by Microsoft as a platform for creating both regular programs and web applications.
+                <br />
+                <span class="cap-letter">I</span>t is largely a continuation of the ideas and principles embedded in Java technology. One of the ideas of .NET is the compatibility of services written in different languages. Although this feature is touted by Microsoft as an advantage of .NET, the Java platform has the same capability.
+            </div>
+        </div>
+        <div class="item-EVENT">
+            <div class="boxEvent boxCap">
+                Events
+            </div>
+            <div class="boxContent">
+                <span class="cap-letter">I</span>n the coming days, several interesting events await us :
+                <ul>
+                    <li> First event </li>
+                    <li> Second event </li>
+                    <li> Third event </li>
+                </ul>
+            </div>
+        </div>
+        <div class="item-BLOG">
+            <div class="boxBlog boxCap">
+                Blog
+            </div>
+            <div class="boxContent">
+                <span class="cap-letter">W</span>e invite you to join our blog. We discuss life, work, program code: there are a lot of interesting topics in general.
+                <br />
+                <span class="cap-letter">J</span>oin now!
+            </div>
+        </div>
+        <div class="item-CONT">
+            <div class="boxCont boxCap">
+                Contavts
+            </div>
+            <img class="contIco" src="https://cdn.icon-icons.com/icons2/790/PNG/512/fb_icon-icons.com_65434.png" alt="facebook">
+            <img class="contIco" src="https://image.flaticon.com/icons/png/512/87/87413.png" alt="Telegram">
+            <img class="contIco" src="https://img.icons8.com/all/500/viber.png" alt="viber">
+        </div>
+    </section>
+
+    <footer class="footer">
+        &#169 <span class="cap-letter">P</span>owered by Binery Studio Team
+    </footer>
+</body>
+</html>
+

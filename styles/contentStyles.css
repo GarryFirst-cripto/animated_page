@@ -1,0 +1,280 @@
+
+    .context {
+        display: grid;
+        position: relative;
+        min-height: calc(100vh - var(--heightFooter) * 4);
+        padding: var(--heightFooter) var(--otstup);
+        --cellX: calc((100vw - 2 * var(--otstup)) / 16);
+        --cellY: calc(var(--cellX) * 0.91);
+        grid-template-columns: calc(4 * var(--cellX)) calc(4 * var(--cellX)) calc(5 * var(--cellX)) 1fr;
+        grid-template-rows: repeat(8, var(--cellY));
+        grid-template-areas:
+                    "zone1 zone2 zone3 zone3"
+                    "zone1 zone2 zone3 zone3"
+                    "zone1 zone2 zone3 zone3"
+                    "zone1 zone2 zone6 zone7"
+                    "zone4 zone2 zone6 zone7"
+                    "zone4 zone2 zone6 zone8"
+                    "zone4 zone5 zone6 zone8"
+                    "zone4 zone5 zone6 zone9";
+    }
+
+    @media all and (max-width: 970px) {
+        .context {
+            display: grid;
+            position: relative;
+            min-height: calc(100vh - var(--heightFooter) * 4);
+            padding: var(--heightFooter) var(--otstup);
+            --cellX: calc((100vw - 2 * var(--otstup)) / 18);
+            grid-template-columns: calc(8 * var(--cellX)) 1fr calc(5 * var(--cellX)) calc(4 * var(--cellX));
+            grid-template-rows: calc(3 * var(--cellX)) calc(3 * var(--cellX)) calc(2 * var(--cellX)) repeat(2, calc(3 * var(--cellX)));
+            grid-template-areas:
+                    "zone1 zone2 zone2 zone7"
+                    "zone1 zone2 zone2 zone8"
+                    "zone1 zone2 zone2 zone9"
+                    "zone5 zone5 zone3 zone3"
+                    "zone4 zone4 zone6 zone6";
+        }
+    }
+
+    .boxCap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 1s;
+        z-index: 1;
+    }
+
+    .boxContent {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 98%;
+        height: 98%;
+        overflow: auto;
+        font-size: 20px;
+        text-align: justify;
+        padding: 1%;
+    }
+
+    .context-img {
+        position: relative;
+        float: left;
+        width: 30%;
+        margin: 10px;
+    }
+
+    .cap-letter {
+        margin-left: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #ff003b;
+    }
+
+    .item-A {
+        position: relative;
+        grid-area: zone1;
+        perspective: 600px;
+        transform-style: preserve-3d;
+    }
+
+    .boxA {
+        background-color: #f6f1f1;
+        font-size: 90px;
+        font-weight: bold;
+        transition-property: transform, opacity;
+    }
+
+    .item-A:hover > .boxA {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    .item-A:hover > .boxAcontent {
+        transform: none;
+        opacity: 1;
+    }
+
+    .item-JS {
+        position: relative;
+        grid-area: zone2;
+    }
+
+    .boxJS {
+        justify-content: flex-end;
+        align-items: flex-end;
+        background-color: #ecd738;
+        font-size: 90px;
+        font-weight: bold;
+        transition-property: transform;
+    }
+
+    .item-JS:hover > .boxJS {
+        transform: rotate3d(1, 0, 1, 180deg);
+    }
+
+    .item-JS:hover > .boxJScontent {
+        transform: none;
+    }
+
+    .item-QA {
+        position: relative;
+        grid-area: zone4;
+        perspective: 600px;
+        transform-style: preserve-3d;
+    }
+
+    .boxQA {
+        background-color: #2dcb0c;
+        font-size: 90px;
+        font-family: "Arial Narrow";
+        transition-property: transform, opacity;
+    }
+
+    .item-QA:hover > .boxQA {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    .item-QA:hover > .boxQAcontent {
+        transform: none;
+        opacity: 1;
+    }
+
+    .item-PHP {
+        position: relative;
+        grid-area: zone3;
+        background-color: #c78d43;
+        overflow: hidden;
+    }
+
+    .boxPHP {
+        background-color: #616c68;
+        font-size: 90px;
+        font-weight: bold;
+        transition-property: left, top;
+    }
+
+    .item-PHP:hover > .boxPHP {
+        left: 100%;
+        top: -100%;
+    }
+
+    .item-JAVA {
+        position: relative;
+        grid-area: zone5;
+        overflow: hidden;
+    }
+
+    .boxJAVA {
+        background-color: #ef2164;
+        font-size: 90px;
+        font-weight: bold;
+        transition-property: top;
+    }
+
+    .boxJAVAcontent {
+        background-color: #fdf3c6;
+    }
+
+    .item-JAVA:hover > .boxJAVA {
+        top: 100%;
+    }
+
+    .item-NET {
+        position: relative;
+        grid-area: zone6;
+        overflow: hidden;
+    }
+
+    .boxNET {
+        background-color: #5b135c;
+        font-size: 90px;
+        font-weight: bold;
+        transition-property: left, top;
+    }
+
+    .item-NET:hover > .boxNET {
+        left: 100%;
+        top: 100%;
+    }
+
+    .boxNETcontent {
+        background-color: aquamarine;
+    }
+
+    .item-EVENT {
+        position: absolute;
+        height: 100%;
+        grid-area: zone7;
+        overflow: hidden;
+    }
+
+    .boxEvent {
+        background-color: #5ba3d5;
+        font-size: 30px;
+        font-weight: bold;
+        transition-property: left;
+    }
+
+    .item-EVENT:hover > .boxEvent {
+        left: 100%;
+    }
+
+    .item-BLOG {
+        position: absolute;
+        height: 100%;
+        grid-area: zone8;
+        overflow: hidden;
+    }
+
+    .boxBlog {
+        background-color: #1c44a5;
+        font-size: 30px;
+        font-weight: bold;
+        transition-property: left;
+    }
+
+    .item-BLOG:hover > .boxBlog {
+        left: 100%;
+    }
+
+    .item-CONT {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        grid-area: zone9;
+        overflow: hidden;
+        font-size: 20px;
+        padding: 5px;
+    }
+
+    .boxCont {
+        background-color: #092566;
+        color: #ceaf3d;
+        font-size: 30px;
+        font-weight: bold;
+        transition-property: left;
+    }
+
+    .item-CONT:hover > .boxCont {
+        left: 100%;
+    }
+
+    .contIco {
+        width: 24px;
+        height: 24px;
+        margin: 10px;
+        border-radius: 6px;
+    }
+
+    .contIco:hover {
+        filter: invert(100%);
+        background-color: #c3c686;
+    }

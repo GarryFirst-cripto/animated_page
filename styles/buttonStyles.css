@@ -1,0 +1,94 @@
+
+    .button {
+        position: absolute;
+        top: 45%;
+        left: calc(25% - 45px);
+        float: left;
+        width: 90px;
+        min-height: 25px;
+        border: 2px solid;
+        border-radius: 5px;
+        border-image-source: linear-gradient(to bottom right, #26d62e, #259013);
+        border-image-slice: 1;
+        background: linear-gradient(to bottom, #86ffaf, #29f732) #fff8fd;
+        box-shadow: 5px 5px 15px rgba(135, 168, 196, 0.5);
+        margin: 5px;
+        word-wrap: break-word;
+        font: 16px Roboto;
+        font-weight: bold;
+        cursor: pointer;
+        transition-property: left, top;
+        transition-duration: 300ms;
+    }
+
+    .button:active {
+        padding-left: 10px;
+        background: linear-gradient(to top, #65f9db, #78e4d9) #fff8fd;
+    }
+
+    .smile {
+        position: absolute;
+        top: 30%;
+        width: 45%;
+        right: 5%;
+    }
+
+    .trapA {
+        position: absolute;
+        top: calc(45% - 20px);
+        left: calc(15% - 70px);
+        width: calc(10% + 70px);
+        height: 40px;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .trapA:hover ~ .button {
+        top: 60%;
+        left: calc(45% - 70px);
+    }
+
+    .trapB {
+        position: absolute;
+        top: calc(45% - 20px);
+        left: 25%;
+        width: calc(10% + 70px);
+        height: 40px;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .trapB:hover ~ .button {
+        top: 65%;
+        left: 0%;
+    }
+
+    .trapC {
+        position: absolute;
+        top: 50%;
+        left: calc(15% - 70px);
+        width: calc(10% + 70px);
+        height: calc(10% + 13px);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .trapC:hover ~ .button {
+        top: 30%;
+        left: calc(45% - 70px);
+    }
+
+    .trapD {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        width: calc(10% + 70px);
+        height: calc(10% + 13px);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .trapD:hover ~ .button {
+        top: 30%;
+        left: 1%;
+    }

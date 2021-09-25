@@ -1,0 +1,42 @@
+
+    .alertpanel {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: fixed;
+        width: 300px;
+        right: 15px;
+        bottom: 15px;
+        z-index: 3;
+    }
+
+    .alertpanel > div {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 3px;
+        font-size: 22px;
+        margin-top: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .alertimg {
+        height: 36px;
+        width: 36px;
+        margin: 10px;
+    }
+
+    .error-alert {
+        background-color: rgba(217,98,40,0.7);
+    }
+
+    .info-alert {
+        background-color: rgba(176,234,146,0.7);
+    }
+
+    .alertpanel > .joke-alert {
+        display: none;
+        background-color: rgba(220,208,114,0.7);
+    }

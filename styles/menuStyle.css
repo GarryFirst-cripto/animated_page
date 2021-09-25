@@ -1,0 +1,56 @@
+    .menucheck  {
+        display: block;
+        position: fixed;
+        top: 0px;
+        right: calc(var(--otstup) - 2px);
+        width: var(--size);
+        height: var(--size);
+        opacity: 0;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    .menucheck:checked ~ .wrapmenu {
+        transform: none;
+    }
+    .menucheck:checked ~ .alertpanel > .joke-alert {
+        display: flex;
+    }
+
+    .logos {
+        position: relative;
+        float: left;
+        margin-right: 15px;
+        margin-left: 5px;
+        top: 10px;
+        width: var(--size);
+        height: var(--size);
+    }
+
+    .wrapmenu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: 3px solid rgba(0,0,0,.4);
+    }
+
+    .wrapmenu li {
+        margin-top: 12px;
+        cursor: pointer;
+    }
+
+    .wrapmenu a {
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgba(0,0,0,.6);
+        padding: 5px;
+        position: relative;
+        transition: .3s linear;
+    }
+
+    .wrapmenu a:hover {
+        background: #808080;
+        color: white;
+    }
